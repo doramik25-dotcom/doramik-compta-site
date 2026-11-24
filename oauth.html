@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DORAMIK COMPTA - retour a l'application</title>
+<style>body{font-family:system-ui,sans-serif;background:#0f172a;color:#fff;text-align:center;padding:40px 20px}a.b{display:inline-block;margin-top:24px;background:#f2a93b;color:#111;padding:16px 28px;border-radius:12px;font-weight:700;text-decoration:none}</style>
+</head><body>
+<h1>DORAMIK COMPTA</h1>
+<p>Connexion Google terminee. Retour a l'application...</p>
+<a class="b" id="back" href="#">Retourner a DORAMIK</a>
+<script>
+  var q = location.search.replace(/^\?/, '');
+  var intent = 'intent://oauth?' + q + '#Intent;scheme=ma.doramik.compta;package=ma.doramik.compta;end';
+  document.getElementById('back').href = intent;
+  setTimeout(function () { location.href = intent; }, 300);
+</script>
+</body></html>
